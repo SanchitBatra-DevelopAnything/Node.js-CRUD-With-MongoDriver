@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is the cart</h1>
+    <h3>Products with ids are available : </h3>
+    <% cart.products.forEach((item)=>{ %>
+        <p>Item with id : <%=item.id%> available</p>
+     <% }) %> 
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit hub for <%=book.title%> </h1>
+    <hr>
+    <form action = "/edit/<%=book._id%>" method = "post">
+        <input type = "text" value = "<%=book.title%>" name = "updatedTitle">
+        <input type = "number" value = "<%=book.price%>" name = "updatedPrice">
+        <button type = "submit">Save it back!</button>
+    </form>
+</body>
+</html>

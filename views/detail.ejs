@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style = "text-align:center;">Details about <%=product.title%></h1>
+    <hr>
+    <p>price is : <%=product.price%></p>
+    <form action = "/edit/<%=product._id%>" method = "get">
+        <button type = "submit">Edit this book</button>
+    </form>
+    <form action = "/delete/<%=product._id%>" method = "post">
+        <button type = "submit">Delete this book</button>
+    </form>
+</body>
+</html>

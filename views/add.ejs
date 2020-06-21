@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "app.css">
+    <title>Document</title>
+</head>
+<body>
+    <%-include('includes/navigation.ejs')%>
+    <form method = "post" action = "/add">
+        <input type = "text" name = "bookTitle">
+        <input type = "number" name = "price">
+        <button type = "submit">Click to add.</button>
+    </form>
+    <% if(books.length > 0) { %>
+        <h3>Here are all the books</h3>
+        <% for(book of books) { %>
+            <ol>
+                <li><%=book.title%></li>
+                <a href = "/details/<%=book._id%>" class = "btn">Details</a>
+                <form action = "/cart" method = "post">
+                    <input type = "hidden" value = "<%=book._id%>" name = "bookid">
+                    <button>Add to cart.</button>
+                </form>
+            </ol>
+         <% } %>
+    <% } %>
+</body>
+</html>
